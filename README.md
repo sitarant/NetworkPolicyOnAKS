@@ -1,11 +1,11 @@
 # Network Policy on AKS
-This is a demo to walk through setting up Network Policies on AKS, and their use.  By default, without any Network Policies, any Pods within a cluster namespace are allowed to communicate with each other.  From a security persepctive you can wither trust the boundary of the cluster ot implement hard restrictions on workload to workload communications.
+This is a demo to walk through setting up Network Policies on AKS, and their use.  By default, without any Network Policies, any Pods within a cluster namespace are allowed to communicate with each other.  From a security persepctive you can either trust the boundary of the cluster ot implement hard restrictions on workload to workload communications.
 
 ## Why!?
 Anything running within a container is still an attack vector.  If you are serving a REST endpoint over HTTP, you can still (potentially) inflict a buffer overflow.  Containers don't change this.  They are just a mechanism to Build, Ship and Run your workloads.  If yout B.S.R. bad code it just means it gets shipped quiccker.
 
 ### Now what?
-With Network Policies you have the ability to limit communication from one workload to another.  This allows you to limit the attack vector, and constrain communication to ONLY the workloads that need to talk to each other.  "Every little helps"...
+With Network Policies you have the ability to limit communication from one workload to another. This allows you to limit the attack vector, and constrain communication to ONLY the workloads that need to talk to each other.  "Every little helps"...
 
 ### 
 
