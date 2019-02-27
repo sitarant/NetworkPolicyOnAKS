@@ -36,6 +36,19 @@ Name                                            State
 Microsoft.ContainerService/EnableNetworkPolicy  Registering
 ```
 
+When the state changes to Registered like this
+```bash
+Name                                            State
+----------------------------------------------  ----------
+Microsoft.ContainerService/EnableNetworkPolicy  Registered
+```
+
+You need to then run the following to propagate the changes
+
+```bash
+az provider register -n Microsoft.ContainerService
+```
+
 ## Creating your AKS cluster with Network Policy support
 
 Let's go ahead and setup some environment variables we will use later...
